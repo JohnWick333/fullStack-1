@@ -28,7 +28,6 @@ passport.use(new GoogleStrategy({
             new User({googleId:profile.id}).save().then(user=>{
                 done(null,user);
             });
-            
         }
     }).catch(error=>{
         console.log(error)
